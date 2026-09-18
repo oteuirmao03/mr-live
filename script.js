@@ -19,3 +19,42 @@ document.querySelector('#brief-form').addEventListener('submit',event=>{
   setTimeout(()=>URL.revokeObjectURL(url),1000);
   document.querySelector('#form-status').textContent='Resumo preparado para descarregar. Guarde-o para a sua conversa com a MR Live.';
 });
+
+// Motion remains optional, including when the operating system requests less motion.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const motionButton = document.createElement('button');
+motionButton.className = 'motion-toggle';
+motionButton.type = 'button';
+let motionPaused = motionPreference.matches;
+function updateMotion() {
+  document.documentElement.classList.toggle('motion-paused', motionPaused);
+  motionButton.textContent = motionPaused ? '▷ Ativar animações' : 'Ⅱ Pausar animações';
+  motionButton.setAttribute('aria-pressed', String(motionPaused));
+}
+motionButton.addEventListener('click', () => { motionPaused = !motionPaused; updateMotion(); });
+motionPreference.addEventListener('change', event => { motionPaused = event.matches; updateMotion(); });
+document.body.appendChild(motionButton);
+updateMotion();
+bars.querySelectorAll('i').forEach((bar, index) => {
+  bar.style.setProperty('--delay', `${-(index % 17) * .13}s`);
+  bar.style.setProperty('--duration', `${1.1 + (index % 7) * .19}s`);
+});
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .08 });
+  document.querySelectorAll('.intro-body, .section-heading, .service, .statement, .process-layout h2, .steps article, .project-layout').forEach((element, index) => {
+    element.classList.add('reveal');
+    element.style.setProperty('--reveal-delay', `${(index % 3) * 75}ms`);
+    revealObserver.observe(element);
+  });
+  const waveObserver = new IntersectionObserver(entries => {
+    bars.classList.toggle('offscreen', !entries[0].isIntersecting);
+  });
+  waveObserver.observe(bars);
+}
