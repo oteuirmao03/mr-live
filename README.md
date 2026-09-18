@@ -1,23 +1,17 @@
-# MR Live
+# MR Live — portfólio cinematográfico
 
-Site responsivo em português, com amarelo, branco e pequenos detalhes vermelhos. HTML, CSS e JavaScript, sem instalação de dependências.
+Portfólio em português dedicado a Live, Fotografia e Vídeo. Identidade amarela e branca, imagem editorial cinematográfica, animações opcionais, filtros por área e detalhes acessíveis em modal.
 
-Abra `index.html` no navegador. As fontes Google Fonts são opcionais: sem Internet, o site usa Arial.
+Contacto fornecido: 876 739 517, com link para chamada. Confirmar o indicativo internacional antes de integrar WhatsApp.
 
-## Conteúdo a confirmar
+## Fotografias e filmes reais
 
-Esta primeira versão assume que a MR Live trabalha com transmissões ao vivo, produção audiovisual e eventos. Confirmar estes serviços antes de publicar. Contacto fornecido: 876 739 517, integrado num link para chamada. Não foram inventados clientes, testemunhos ou números de resultados. O formulário gera um ficheiro de resumo local e não envia dados. Para integrar WhatsApp, confirmar o indicativo internacional.
+Os três cartões apresentam áreas de trabalho, não projetos de clientes. As fotografias, vídeos e gravações de lives reais ainda não foram fornecidos. A imagem cinema-editorial.png foi gerada por IA como ilustração editorial e está identificada no site. Não representa equipamento, filmagem ou trabalho real da MR Live. Não há projetos, clientes, prémios ou números fictícios.
+
+## Utilização
+
+Abrir index.html no navegador. HTML, CSS e JavaScript, sem dependências de compilação. Fontes Google Fonts com alternativas locais. Não recolhe dados; o contacto abre uma chamada. Animações respeitam a preferência de movimento reduzido e podem ser pausadas no rodapé.
 
 ## GitHub Pages
 
-Coloque estes ficheiros na raiz de um repositório. Em Settings > Pages, seleccione Deploy from a branch, a branch principal e a pasta raiz. Guarde. O GitHub apresentará o endereço quando terminar a publicação.
-
-## Ficheiros
-
-- `index.html`: conteúdo e estrutura
-- `style.css`: identidade e responsividade
-- `script.js`: menu móvel e resumo descarregável
-- `favicon.svg`: ícone da marca
-
-Sem analytics, cookies de rastreio ou recolha de dados. Os ficheiros de fonte são pedidos ao Google Fonts quando disponível.
-
+Em Settings > Pages, escolher Deploy from a branch, main e a pasta raiz. O site ainda não foi publicado no Pages.
